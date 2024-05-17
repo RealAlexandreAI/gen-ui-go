@@ -1,0 +1,9 @@
+package component
+
+templ Textarea(label, text string) {
+    <label for="custom-textarea">{ label }</label>
+    <br/>
+    <textarea id="custom-textarea" name="comment" rows="4" cols="50">
+    { text }
+    </textarea>
+}

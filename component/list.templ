@@ -1,0 +1,9 @@
+package component
+
+templ List(texts []string) {
+   <ul>
+       for _,text := range texts{
+           <li>{ text }</li>
+       }
+   </ul>
+}
