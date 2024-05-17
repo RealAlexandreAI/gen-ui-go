@@ -62,20 +62,32 @@
 
 ### Intro
 
+## Updates 
 
-<!-- USAGE EXAMPLES -->
-## Usage
+### Timeline
+### Card
+### Conversation
+### Button
+### List
+### Textarea
 
 
 <!-- GETTING STARTED -->
 ## 🏁 Getting Started
 To add the gen-ui-go to your Go project, use the following command:
 
+```
+// TODO Register here
+
+```
 
 <!-- ROADMAP -->
 ## Roadmap
 
 - [x] Basic feature
+- [ ] Modern CSS like bulma
+- [ ] Registry
+- [ ] More components
 
 
 See the [open issues](https://github.com/RealAlexandreAI/gen-ui-go/issues) for a full list of proposed features (and known issues).
