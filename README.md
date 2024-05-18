@@ -86,7 +86,7 @@ To add the gen-ui-go to your Go project, use the following command:
 
 - [x] Basic feature
 - [ ] Modern CSS like bulma
-- [ ] Registry
+- [ ] Registry like otel collector
 - [ ] More components
 
 
