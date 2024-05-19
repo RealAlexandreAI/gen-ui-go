@@ -5,13 +5,10 @@ package component
 
 //lint:file-ignore SA4006 This context is only used if a nested component is present.
 
-import (
-	"bytes"
-	"context"
-	"io"
-
-	"github.com/a-h/templ"
-)
+import "github.com/a-h/templ"
+import "context"
+import "io"
+import "bytes"
 
 func BodyContent() templ.Component {
 	return templ.ComponentFunc(func(ctx context.Context, templ_7745c5c3_W io.Writer) (templ_7745c5c3_Err error) {

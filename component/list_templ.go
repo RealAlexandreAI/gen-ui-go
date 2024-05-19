@@ -5,13 +5,10 @@ package component
 
 //lint:file-ignore SA4006 This context is only used if a nested component is present.
 
-import (
-	"bytes"
-	"context"
-	"io"
-
-	"github.com/a-h/templ"
-)
+import "github.com/a-h/templ"
+import "context"
+import "io"
+import "bytes"
 
 func List(texts []string) templ.Component {
 	return templ.ComponentFunc(func(ctx context.Context, templ_7745c5c3_W io.Writer) (templ_7745c5c3_Err error) {
@@ -38,7 +35,7 @@ func List(texts []string) templ.Component {
 			var templ_7745c5c3_Var2 string
 			templ_7745c5c3_Var2, templ_7745c5c3_Err = templ.JoinStringErrs(text)
 			if templ_7745c5c3_Err != nil {
-				return templ.Error{Err: templ_7745c5c3_Err, FileName: `list.templ`, Line: 6, Col: 13}
+				return templ.Error{Err: templ_7745c5c3_Err, FileName: `component/list.templ`, Line: 6, Col: 13}
 			}
 			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var2))
 			if templ_7745c5c3_Err != nil {
@@ -62,9 +59,11 @@ func List(texts []string) templ.Component {
 
 func init() {
 	RegisterExample("/list", List([]string{
-		"ListItem1",
-		"ListItem2",
-		"ListItem3",
-		"ListItem4",
+		"English, New York, Spanish, Madrid",
+		"Mandarin, Beijing, French, Paris",
+		"German, Berlin, Portuguese, Lisbon",
+		"Russian, Moscow, Japanese, Tokyo",
+		"Italian, Rome, Arabic, Cairo",
+		"Korean, Seoul, Hindi, New Delhi",
 	}))
 }

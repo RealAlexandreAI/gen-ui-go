@@ -6,7 +6,6 @@ import (
 	"github.com/emirpasic/gods/v2/maps/linkedhashmap"
 )
 
-// nolint
 var ExamplePool = linkedhashmap.New[string, templ.Component]()
 
 // RegisterExample

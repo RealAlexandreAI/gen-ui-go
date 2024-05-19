@@ -14,12 +14,12 @@ func loadHandlers(r *gin.Engine) {
 
 	r.GET("/", func(c *gin.Context) {
 		metaTags := component.MetaTags(
-			"gowebly, htmx example page, go with htmx",
-			"Welcome to example! You're here because it worked out.",
+			"gen-ui-go, htmx, templ",
+			"Generative UI in Golang.",
 		)
 
 		indexTemplate := component.Layout(
-			"Welcome to example!",
+			"Generative UI in Golang.",
 			metaTags,
 		)
 
