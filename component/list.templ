@@ -1,9 +1,18 @@
 package component
 
 templ List(texts []string) {
-   <ul>
-       for _,text := range texts{
-           <li>{ text }</li>
-       }
-   </ul>
+	<ul>
+		for _,text := range texts {
+			<li>{ text }</li>
+		}
+	</ul>
+}
+
+func init() {
+	RegisterExample("/list", List([]string{
+		"ListItem1",
+		"ListItem2",
+		"ListItem3",
+		"ListItem4",
+	}))
 }

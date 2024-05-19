@@ -1,48 +1,38 @@
 package component
 
 templ BodyContent() {
-    <div class="container">
-        <!-- 左侧按钮栏 -->
-        <div class="left-side">
-            <button class="component-button" hx-get="/component/button" hx-target="#display-area" hx-swap="beforeend scroll:bottom show:bottom">Button</button>
-            <button class="component-button" hx-get="/component/list" hx-target="#display-area" hx-swap="beforeend scroll:bottom show:bottom">List</button>
-            <button class="component-button" hx-get="/component/textarea" hx-target="#display-area" hx-swap="beforeend scroll:bottom show:bottom">TextArea</button>
-            <!-- 更多按钮可以继续添加 -->
-        </div>
-
-        <!-- 右侧展示区域 -->
-        <div class="right-side">
-            <div id="display-area">
-                <!-- 展示内容 -->
-            </div>
-        </div>
-    </div>
+	<div class="container">
+		<div class="left-side">
+			<button class="component-button" hx-get="/component/button" hx-target="#display-area" hx-swap="beforeend scroll:bottom show:bottom">Button</button>
+			<button class="component-button" hx-get="/component/list" hx-target="#display-area" hx-swap="beforeend scroll:bottom show:bottom">List</button>
+			<button class="component-button" hx-get="/component/textarea" hx-target="#display-area" hx-swap="beforeend scroll:bottom show:bottom">TextArea</button>
+		</div>
+		<div class="right-side">
+			<div id="display-area"></div>
+		</div>
+	</div>
 }
 
-templ Style(){
-    <style>
+templ Style() {
+	<style>
         body, html {
             margin: 0;
             padding: 0;
             height: 100%;
-            overflow: hidden; /* 防止页面滚动 */
+            overflow: hidden;
             font-family: sans-serif;
         }
-        /* 设置整个容器为相对定位，方便子元素绝对定位 */
         .container {
             display: flex;
             justify-content: space-between;
-            height: 100vh; /* 视口高度 */
             padding: 10px;
             padding-bottom: 100px;
         }
-        /* 左侧按钮栏样式 */
         .left-side {
             background-color: #f2f2f2;
             padding: 10px;
-            flex: 1; /* 左侧宽度为右側的1/4 */
+            flex: 1;
         }
-        /* 按钮样式 */
         .component-button {
             width: 100%;
             padding: 10px;
@@ -56,35 +46,34 @@ templ Style(){
         }
         .right-side {
             background-color: #e0e0e0;
-            flex: 3; /* 右侧宽度为左侧的3倍，实现2:8比例 */
-            overflow-y: auto; /* 允许垂直滚动 */
+            flex: 3;
+            overflow-y: auto;
             padding: 10px;
-            position: relative; /* 为滚动做准备 */
-            min-height: 0; /* 允许根据内容动态调整高度 */
+            position: relative;
+            min-height: 0;
         }
         #display-area {
             display: flex;
             flex-direction: column;
-            align-items: flex-end; /* 确保新内容在右侧区域的底部 */
-            /*position: absolute;*/
+            align-items: flex-end;
             position: relative;
-            padding-bottom: 20px; /* 增加底部内边距 */
+            padding-bottom: 20px;
             width: 96%;
-            bottom: 0; /* 使#display-area始终在底部 */
+            bottom: 0;
         }
 
         #display-area > hr {
             border: 0;
             height: 1px;
             padding-bottom: 10px;
-            background-color: #ccc; /* 线条颜色 */
+            background-color: #ccc;
         }
 
         #display-area > div.generated-component {
             background-color: white;
             padding: 15px;
             border-radius: 5px;
-            margin-bottom: 10px; /* 消息之间的垂直边距 */
+            margin-bottom: 10px;
         }
 
     </style>

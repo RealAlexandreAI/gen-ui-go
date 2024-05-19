@@ -1,5 +1,9 @@
 package component
 
 templ Button(text string) {
-    <button class="button" onclick="alert('按钮被点击了！')">{ text }</button>
+	<button class="button" onclick="alert('Clicked!')">{ text }</button>
+}
+
+func init() {
+	RegisterExample("/button", Button("Click Me!"))
 }

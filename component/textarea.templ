@@ -1,9 +1,14 @@
 package component
 
 templ Textarea(label, text string) {
-    <label for="custom-textarea">{ label }</label>
-    <br/>
-    <textarea id="custom-textarea" name="comment" rows="4" cols="50">
-    { text }
-    </textarea>
+	<label for="custom-textarea">{ label }</label>
+	<br/>
+	<textarea id="custom-textarea" name="comment" rows="4" cols="50">
+		{ text }
+	</textarea>
+}
+
+func init() {
+	RegisterExample("/textarea", Textarea("TextArea label here.",
+		`"The quick brown fox jumps over the lazy dog" is an English-language pangram — a sentence that contains all the letters of the alphabet. The phrase is commonly used for touch-typing practice, testing typewriters and computer keyboards, displaying examples of fonts, and other applications involving text where the use of all letters in the alphabet is desired.`))
 }

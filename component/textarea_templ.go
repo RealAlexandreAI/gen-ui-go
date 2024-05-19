@@ -5,10 +5,13 @@ package component
 
 //lint:file-ignore SA4006 This context is only used if a nested component is present.
 
-import "github.com/a-h/templ"
-import "context"
-import "io"
-import "bytes"
+import (
+	"bytes"
+	"context"
+	"io"
+
+	"github.com/a-h/templ"
+)
 
 func Textarea(label, text string) templ.Component {
 	return templ.ComponentFunc(func(ctx context.Context, templ_7745c5c3_W io.Writer) (templ_7745c5c3_Err error) {
@@ -30,7 +33,7 @@ func Textarea(label, text string) templ.Component {
 		var templ_7745c5c3_Var2 string
 		templ_7745c5c3_Var2, templ_7745c5c3_Err = templ.JoinStringErrs(label)
 		if templ_7745c5c3_Err != nil {
-			return templ.Error{Err: templ_7745c5c3_Err, FileName: `component/textarea.templ`, Line: 4, Col: 40}
+			return templ.Error{Err: templ_7745c5c3_Err, FileName: `textarea.templ`, Line: 4, Col: 37}
 		}
 		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var2))
 		if templ_7745c5c3_Err != nil {
@@ -43,7 +46,7 @@ func Textarea(label, text string) templ.Component {
 		var templ_7745c5c3_Var3 string
 		templ_7745c5c3_Var3, templ_7745c5c3_Err = templ.JoinStringErrs(text)
 		if templ_7745c5c3_Err != nil {
-			return templ.Error{Err: templ_7745c5c3_Err, FileName: `component/textarea.templ`, Line: 7, Col: 10}
+			return templ.Error{Err: templ_7745c5c3_Err, FileName: `textarea.templ`, Line: 7, Col: 8}
 		}
 		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var3))
 		if templ_7745c5c3_Err != nil {
@@ -58,4 +61,9 @@ func Textarea(label, text string) templ.Component {
 		}
 		return templ_7745c5c3_Err
 	})
+}
+
+func init() {
+	RegisterExample("/textarea", Textarea("TextArea label here.",
+		`"The quick brown fox jumps over the lazy dog" is an English-language pangram — a sentence that contains all the letters of the alphabet. The phrase is commonly used for touch-typing practice, testing typewriters and computer keyboards, displaying examples of fonts, and other applications involving text where the use of all letters in the alphabet is desired.`))
 }

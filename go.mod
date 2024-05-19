@@ -4,9 +4,10 @@ go 1.21
 
 require (
 	github.com/a-h/templ v0.2.680
+	github.com/emirpasic/gods/v2 v2.0.0-alpha
 	github.com/gin-gonic/gin v1.10.0
 	github.com/joho/godotenv v1.5.1
-	github.com/samber/lo v1.38.1
+	github.com/samber/lo v1.39.0
 )
 
 require (
