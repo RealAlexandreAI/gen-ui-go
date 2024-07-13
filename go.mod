@@ -3,7 +3,7 @@ module github.com/RealAlexandreAI/gen-ui-go
 go 1.21
 
 require (
-	github.com/a-h/templ v0.2.707
+	github.com/a-h/templ v0.2.747
 	github.com/emirpasic/gods/v2 v2.0.0-alpha
 	github.com/gin-gonic/gin v1.10.0
 	github.com/joho/godotenv v1.5.1
@@ -33,7 +33,7 @@ require (
 	golang.org/x/arch v0.8.0 // indirect
 	golang.org/x/crypto v0.23.0 // indirect
 	golang.org/x/net v0.25.0 // indirect
-	golang.org/x/sys v0.20.0 // indirect
+	golang.org/x/sys v0.21.0 // indirect
 	golang.org/x/text v0.16.0 // indirect
 	google.golang.org/protobuf v1.34.1 // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
