@@ -7,7 +7,7 @@ require (
 	github.com/emirpasic/gods/v2 v2.0.0-alpha
 	github.com/gin-gonic/gin v1.10.0
 	github.com/joho/godotenv v1.5.1
-	github.com/samber/lo v1.47.0
+	github.com/samber/lo v1.49.1
 )
 
 require (
