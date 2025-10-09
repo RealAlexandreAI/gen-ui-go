@@ -1,6 +1,7 @@
 module github.com/RealAlexandreAI/gen-ui-go
 
-go 1.21
+go 1.23.0
+
 toolchain go1.24.1
 
 require (
@@ -8,7 +9,7 @@ require (
 	github.com/emirpasic/gods/v2 v2.0.0-alpha
 	github.com/gin-gonic/gin v1.10.0
 	github.com/joho/godotenv v1.5.1
-	github.com/samber/lo v1.49.1
+	github.com/samber/lo v1.52.0
 )
 
 require (
